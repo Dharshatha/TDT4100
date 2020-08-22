@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="692.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.BMIController">
+   <children>
+      <Text layoutX="23.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BMI - Kalkulator - 2020" textAlignment="CENTER" wrappingWidth="228.80337524414062">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="14.0" layoutY="53.0" prefHeight="321.0" prefWidth="672.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.00001525878906" minWidth="1.3333358764648438" prefWidth="134.00001525878906" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.66666412353516" minWidth="10.0" prefWidth="100.66665140787757" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="32.666656494140625" minHeight="10.0" prefHeight="32.666656494140625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="39.333343505859375" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Skriv inn høyden i meter: " wrappingWidth="108.13668060302734" GridPane.rowIndex="2" />
+            <TextField fx:id="høyde" prefHeight="14.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Skriv inn vekten din i kg:" wrappingWidth="98.13671112060547" GridPane.rowIndex="3" />
+            <TextField fx:id="vekt" prefHeight="5.0" prefWidth="67.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.80337524414062" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button fx:id="BMIknapp" mnemonicParsing="false" onAction="#Regnutbmi" prefHeight="25.0" prefWidth="101.0" text="BMI" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Skriv inn i pounds" wrappingWidth="98.8033447265625" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <TextField fx:id="pounds" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Button fx:id="konverterknapp" mnemonicParsing="false" onAction="#Convert" prefHeight="25.0" prefWidth="98.0" text="Konverter" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <TextArea fx:id="bmien" minWidth="-Infinity" prefHeight="44.0" prefWidth="202.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+            <TextArea fx:id="Kilo" minWidth="-Infinity" prefHeight="82.0" prefWidth="175.0" GridPane.columnIndex="4" GridPane.rowIndex="5" GridPane.rowSpan="2" />
+            <TextField fx:id="navnet" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Skriv inn navnet ditt:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="Enter" mnemonicParsing="false" onAction="#Navn" text="Enter" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button fx:id="Lagre" mnemonicParsing="false" onAction="#save" text="Lagre" GridPane.rowIndex="7" />
+            <Button fx:id="Laste" mnemonicParsing="false" onAction="#load" text="Laste" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+      <Text layoutX="451.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IBS til KG Converter" textAlignment="CENTER" wrappingWidth="194.80337983369827">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
