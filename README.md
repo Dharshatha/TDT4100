@@ -1,0 +1,1 @@
+# Øvingsopplegg i Objektorientert programmering.
